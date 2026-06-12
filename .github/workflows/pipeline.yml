@@ -1,0 +1,20 @@
+name: cicd pipeline
+
+# Triggers: Runs automatically on push to main OR manually via button click
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  # The block containing our sequence of tasks
+  build:
+    runs-on: ubuntu-latest
+
+    # The two specific steps defined in your instructions
+    steps:
+        - name: Checkout code
+        uses: actions/checkout@v4
+        -name: build docker image
+        uses: docker build -t spring-boot-app:latest .
