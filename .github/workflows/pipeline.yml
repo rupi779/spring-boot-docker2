@@ -15,6 +15,6 @@ jobs:
     # The two specific steps defined in your instructions
     steps:
         - name: Checkout code
-        uses: actions/checkout@v4
-        -name: build docker image
-        uses: docker build -t spring-boot-app:latest .
+          uses: actions/checkout@v4
+        - name: build docker image
+          run: docker build -t spring-boot-app:latest .
