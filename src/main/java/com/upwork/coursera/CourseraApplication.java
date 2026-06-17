@@ -31,7 +31,7 @@ public class CourseraApplication {
     private Info swaggerInfo() {
         return new Info()
                 .title("Project API")
-                .description("Project description API updated")
+                .description("Project description API updated new")
                 .version("1.0")
                 .license(new License().name("No license").url(""));
     }
